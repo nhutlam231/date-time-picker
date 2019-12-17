@@ -6,6 +6,7 @@
         [boxValue]="hourBoxValue"
         [value]="hourValue" [min]="0" [max]="23"
         [step]="stepHour" [inputLabel]="'Hour'"
+        [debounceTime]="debounceTime"
         (inputChange)="setHourValueViaInput($event)"
         (valueChange)="setHourValue($event)"></owl-date-time-timer-box>
 <owl-date-time-timer-box
@@ -16,6 +17,7 @@
         [downBtnDisabled]="!downMinuteEnabled()"
         [value]="minuteValue" [min]="0" [max]="59"
         [step]="stepMinute" [inputLabel]="'Minute'"
+        [debounceTime]="debounceTime"
         (inputChange)="setMinuteValue($event)"
         (valueChange)="setMinuteValue($event)"></owl-date-time-timer-box>
 <owl-date-time-timer-box
@@ -27,6 +29,7 @@
         [downBtnDisabled]="!downSecondEnabled()"
         [value]="secondValue" [min]="0" [max]="59"
         [step]="stepSecond" [inputLabel]="'Second'"
+        [debounceTime]="debounceTime"
         (inputChange)="setSecondValue($event)"
         (valueChange)="setSecondValue($event)"></owl-date-time-timer-box>
 

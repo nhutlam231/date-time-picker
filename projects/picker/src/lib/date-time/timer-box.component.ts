@@ -55,6 +55,8 @@ export class OwlTimerBoxComponent implements OnInit, OnDestroy {
 
     @Input() inputLabel: string;
 
+    @Input() debounceTime: number = 500;
+
     @Output() valueChange = new EventEmitter<number>();
 
     @Output() inputChange = new EventEmitter<number>();
@@ -76,7 +78,7 @@ export class OwlTimerBoxComponent implements OnInit, OnDestroy {
 
     public ngOnInit() {
         this.inputStreamSub = this.inputStream.pipe(
-            debounceTime(500),
+            debounceTime(this.debounceTime),
             distinctUntilChanged()
         ).subscribe(( val: string ) => {
             if (val) {

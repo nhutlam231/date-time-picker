@@ -54,6 +54,12 @@ export abstract class OwlDateTime<T> {
     startView: 'month' | 'year' | 'multi-years' = 'month';
 
     /**
+     * debounceTime for auto correct timer.
+     */
+    @Input()
+    debounceTime: number = 500;
+
+    /**
      * Hours to change per step
      */
     private _stepHour = 1;

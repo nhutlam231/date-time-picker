@@ -100,6 +100,12 @@ export class OwlTimerComponent<T> implements OnInit {
     @Input()
     stepSecond = 1;
 
+    /**
+     * Seconds to auto update time value
+     */
+    @Input()
+    debounceTime = 500;
+
     get hourValue(): number {
         return this.dateTimeAdapter.getHours(this.pickerMoment);
     }

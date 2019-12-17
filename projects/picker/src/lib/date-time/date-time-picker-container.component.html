@@ -30,6 +30,7 @@
             [stepHour]="picker.stepHour"
             [stepMinute]="picker.stepMinute"
             [stepSecond]="picker.stepSecond"
+            [debounceTime]="picker.debounceTime"
             (selectedChange)="timeSelected($event)"></owl-date-time-timer>
 
     <div *ngIf="picker.isInRangeMode"
